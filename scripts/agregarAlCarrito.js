@@ -54,13 +54,6 @@ function sumarPrecio(miCarrito) {
     console.log(total);
 }
 
-function quitarPeli(miCarrito){
-    if (miCarrito = 1){
-        miCarrito.pop(miCarrito.precio);
-    }
-    console.log(miCarrito);
-}
-
 //Llamado a las funciones
 existePeli();
 tengoStock();
