@@ -44,7 +44,7 @@ function agregarPelicula() {
     if (existePeli() && tengoStock()) {
         miCarrito.push(obtenerPeli());
         return miCarrito;
-    } else { console.log("Hubo un error."); }
+    } else { console.log("No tiene stock o no ingresó bien la pelicula."); }
 }
 
 //Funcion sumar los precios de los procuctos agregados en el carrito solamente.
@@ -54,17 +54,15 @@ function sumarPrecio(miCarrito) {
     console.log(total);
 }
 
-//Función eliminar del carrito.
-// function quitarPeli(miCarrito){
-//         if (miCarrito = 1){
-//             miCarrito.pop(miCarrito.precio);
-//         }
-//         console.log(miCarrito);
-// }
+function quitarPeli(miCarrito){
+    if (miCarrito = 1){
+        miCarrito.pop(miCarrito.precio);
+    }
+    console.log(miCarrito);
+}
 
 //Llamado a las funciones
 existePeli();
 tengoStock();
-agregarPelicula();
+console.log(agregarPelicula()); //llamo a consola para revisar que muestra bien el resultado.
 sumarPrecio(miCarrito);
-// quitarPeli(miCarrito);
