@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../css/main.css">
 
 </head>
-<body>
+<body onload="cardsAlquiler()">
 
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-primary bg-gradient fixed-top">
@@ -34,13 +34,10 @@
                         <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="alquiler.html">Alquiler de Pelis</a>
+                        <a class="nav-link" href="alquiler.html">Películas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="comprar-pelis.html">Comprar Pelis</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mi-carrito.html">Mi carrito <span class="badge badge-light">3</span></a>
+                        <a class="nav-link" href="mi-carrito.html">Mi carrito <span class="badge badge-light" id="cantidad-prod"></span></a>
                     </li>
                 </ul>
             </div>
@@ -52,7 +49,7 @@
 <section class="bg-dark py-5 alquilerTitle">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
-            <h1 class="display-6 fw-bolder">Alquiler de películas</h1>
+            <h1 class="display-6 fw-bolder">Alquiler y venta de películas</h1>
             <!-- <p class="lead fw-normal text-white-50 mb-0">Busca la que más te guste!</p> -->
         </div>
     </div>
@@ -60,211 +57,8 @@
 <!-- Section-->
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Terror</div>
-                    <!-- Product image-->
-                    <img class="card-img-top" src="../images/movies/The_Exorcism_of_God_movie.jpg" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center text-dark">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">The exorcism of God</h5>
-                            <!-- Product price-->
-                            $40.00 - $80.00
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Alquilar</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Comedia</div>
-                    <!-- Product image-->
-                    <img class="card-img-top" src="../images/movies/Senior_Year_movie.jpg" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center text-dark">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Senior Year</h5>
-                            <!-- Product reviews-->
-                            <div class="d-flex justify-content-center small text-warning mb-2">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                            </div>
-                            <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">$20.00</span>
-                            $18.00
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Alquilar</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Romantica</div>
-                    <!-- Product image-->
-                    <img class="card-img-top" src="../images/movies/Fault-in-our-stars-movie.jpg" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center text-dark">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Sale Item</h5>
-                            <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">$50.00</span>
-                            $25.00
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Alquilar</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Ciencia Ficción</div>
-                    <!-- Product image-->
-                    <img class="card-img-top" src="../images/movies/star_wars_movie_2.jpg" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center text-dark">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Star wars Episode I</h5>
-                            <!-- Product reviews-->
-                            <div class="d-flex justify-content-center small text-warning mb-2">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                            </div>
-                            <!-- Product price-->
-                            $40.00
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Alquilar</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Romantica/Drama</div>
-                    <!-- Product image-->
-                    <img class="card-img-top" src="../images/movies/remember_ne_movie.jpg" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center text-dark">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Remember me</h5>
-                            <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">$50.00</span>
-                            $25.00
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Alquilar</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Comedia</div>
-                    <!-- Product image-->
-                    <img class="card-img-top" src="../images/movies/red_notice_movie.jpg" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center text-dark">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Red Notice</h5>
-                            <!-- Product price-->
-                            $120.00 - $280.00
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Alquilar</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Terror</div>
-                    <!-- Product image-->
-                    <img class="card-img-top" src="../images/movies/the_unholy_movie.jpg" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center text-dark">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">The Unholy</h5>
-                            <!-- Product reviews-->
-                            <div class="d-flex justify-content-center small text-warning mb-2">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                            </div>
-                            <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through">$20.00</span>
-                            $18.00
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Alquilar</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Ciencia Ficción</div>
-                    <!-- Product image-->
-                    <img class="card-img-top" src="../images/movies/star_wars_movie.jpg" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center text-dark">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Star Wars: The Rise of Skywalker</h5>
-                            <!-- Product reviews-->
-                            <div class="d-flex justify-content-center small text-warning mb-2">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                            </div>
-                            <!-- Product price-->
-                            $40.00
-                        </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Alquilar</a></div>
-                    </div>
-                </div>
-            </div>
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="cards-alquiler">
+                <!-- cards con js -->
         </div>
     </div>
 </section>
@@ -295,6 +89,7 @@
     </footer>
     <!-- fin de footer -->
 
+    <script src="../scripts/mi-carrito.js"></script>
 </body>
 
 </html>
