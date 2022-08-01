@@ -27,6 +27,12 @@ function cardsAlquiler() {
     let emptyList = document.querySelector("#cards-alquiler");
     for (let namePeli of productos) {
         let listadoCards = document.createElement("div");
+        let label;
+        if(namePeli.tipo == "alquiler"){
+            label = "Alquiler";
+        }else{
+            label = "Comprar";
+        }
         listadoCards.classList.add("col", "mb-5");
         listadoCards.innerHTML = `
         <div class="card h-100">
@@ -45,7 +51,7 @@ function cardsAlquiler() {
         </div>
         <!-- Product actions-->
         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-        <div class="text-center"><a class="btn btn-outline-dark mt-auto agregar-carrito" id="${namePeli.id}">${namePeli.tipo}</a></div>
+        <div class="text-center"><a class="btn btn-outline-dark mt-auto agregar-carrito" id="${namePeli.id}">${label}</a></div>
         </div>
         </div>
         </div>
