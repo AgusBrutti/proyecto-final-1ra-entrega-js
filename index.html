@@ -23,6 +23,7 @@
         crossorigin="anonymous"></script>
     <!-- Links locales -->
     <link rel="stylesheet" href="css/main.css">
+    <script src="scripts/index.js" defer></script>
 
 </head>
 
@@ -31,7 +32,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-primary bg-gradient fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#"><img class="logo-block" src="images/logo-blockbuster.png"
+                <a class="navbar-brand" href="index.html"><img class="logo-block" src="images/logo-blockbuster.png"
                         alt="logo-blockbuster"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -47,8 +48,8 @@
                             <a class="nav-link" href="pages/alquiler.html">Películas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/mi-carrito.html">Mi carrito <span
-                                    class="badge badge-light" id="cantidad-prod"></span> </a>
+                            <a class="nav-link" href="pages/mi-carrito.html">Mi carrito <span class="badge badge-light"
+                                    id="cantidad-prod"></span> </a>
                         </li>
                     </ul>
                 </div>
@@ -70,7 +71,7 @@
                 <img src="images/slider-1.jpg" alt="">
                 <div class="carousel-caption">
                     <h5>Nuestro local se encuentra abierto las 24hs</h5>
-                    <button class="custom-boton boton-1"><span>¿Cómo alquilar películas en nuestro
+                    <button class="custom-boton boton-1" id="comoAlquilar"><span>¿Cómo alquilar películas en nuestro
                             local?</span></button>
                 </div>
             </div>
@@ -85,7 +86,7 @@
                 <img src="images/slider-3.jpg" alt="">
                 <div class="carousel-caption">
                     <h5>No solo podes alquilar, también tenemos la sección de venta.</h5>
-                    <button class="custom-boton boton-1"><span>Ver películas disponibles en venta</span></button>
+                    <button class="custom-boton boton-2"><a href="pages/alquiler.html"><span>Ver películas disponibles en venta</span></a></button>
                 </div>
             </div>
         </div>
@@ -100,6 +101,22 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <!-- Modals -->
+    <div id="myModal2" class="modalHome">
+        <!-- Modal contenido -->
+        <div class="modal-contentHome">
+            <span class="close" id="close">&times;</span>
+            <p>Para poder alquilar peliculas necesita sacar una credencial en el local con sus
+                datos para pertenecer como cliente, tiene diferentes tipos de credenciales: Black,
+                Gold y Red. Éstas mismas les permitirá tener la película por X días antes
+                de devolverla.
+            </br>Black: 7 días, Gold: 4 días y Red: 2 días.
+            </br> *Si alquila por primera vez a través de la página online, cuando asista a retirar la
+                película puede sacar la credencial.
+            </br>**La credencial contiene costos extras mínimos.
+            </p>
+        </div>
+    </div>
 
 
     <!-- Page Content -->
@@ -108,7 +125,7 @@
             <h1 class="fw-bold">Alquiler de películas formatos VHS, DVD y Blue Ray.</h1>
             <h3 class="fw-bold">También podes comprar tus pelis favoritas!</h3>
             <p class="lead">
-                Veni a disfrutar en familia y elegí las últimas novedades para un fin de semana de entretemiento!!
+                Veni a disfrutar en familia y elegí las últimas novedades para un fin de semana de entretenimiento!!
             </p>
         </div>
     </section>
@@ -116,8 +133,7 @@
     <!-- inicio de footer -->
     <footer>
         <div class="footer-block">
-            <a href="index.html"></a><img class="logo-footer" src="images/logo-blockbuster.png"
-                alt="Logo Blockbuster"></a>
+            <img class="logo-footer" src="images/logo-blockbuster.png" alt="Logo Blockbuster"></a>
             <ul class="list-footer">
                 <li class="list-1">Av. Argentina 1007, Merlo, B1722, Buenos Aires</li>
                 <li class="list-1"><a class="diferent-a" href="pages/contacto.html"><b>Contacto</b></a></li>
@@ -138,7 +154,7 @@
     </footer>
     <!-- fin de footer -->
 
-    
+
     <script src="../scripts/mi-carrito.js"></script>
 
 </body>

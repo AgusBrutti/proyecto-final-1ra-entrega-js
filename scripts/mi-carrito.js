@@ -5,7 +5,7 @@ fetch('../scripts/productos.json')
 .then((productosJSON)=> {productos = productosJSON});
 
 //Declaro un array vacío para guardar las peliculas seleccionadas.
-let carrito = sessionStorage.getItem("carrito") == null ? [] : JSON.parse(sessionStorage.getItem("carrito"));
+let carrito = sessionStorage.getItem("carrito") == '' ? [] : JSON.parse(sessionStorage.getItem("carrito"));
 //variable para la cantidad de productos del carrito en el Badge del menú.
 const cantidadProdBadge = document.querySelector("#cantidad-prod");
 //Cantidad del carrito en el menú.
@@ -166,7 +166,7 @@ function agregoListaMiCarrito() {
     for (let namePeli of carrito) {
         let listado = document.createElement("li");
         listado.classList.add("list-group-item", "d-flex", "justify-content-between", "lh-condensed");
-        listado.innerHTML = `<div><h6 class="my-0">${namePeli.nombre}</h6></div><span class="text-muted">${namePeli.precio}</span>`;
+        listado.innerHTML = `<div><h6 class="my-0">${namePeli.nombre}</h6></div><span class="text-muted">$ ${namePeli.precio}</span>`;
         emptyList.appendChild(listado);
     }
     cupon()
@@ -201,7 +201,7 @@ function sumarPrecio(carrito) {
     let emptyListPrice = document.querySelector("#listaUl");
     let listPrice = document.createElement("li");
     listPrice.classList.add("list-group-item", "d-flex", "justify-content-between", "lh-condensed");
-    listPrice.innerHTML = `<span>Total:</span><strong>${total}</strong>`;
+    listPrice.innerHTML = `<span>Total:</span><strong>$${total}</strong>`;
     emptyListPrice.appendChild(listPrice);
     console.log(total);
 }
