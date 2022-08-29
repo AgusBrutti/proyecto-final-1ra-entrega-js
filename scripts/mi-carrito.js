@@ -5,7 +5,8 @@ fetch('../scripts/productos.json')
 .then((productosJSON)=> {productos = productosJSON});
 
 //Declaro un array vacío para guardar las peliculas seleccionadas.
-let carrito = sessionStorage.getItem("carrito") == '' ? [] : JSON.parse(sessionStorage.getItem("carrito"));
+let carritoSession = sessionStorage.getItem("carrito");
+let carrito = carritoSession == '' || carritoSession == null ? [] : JSON.parse(sessionStorage.getItem("carrito"));
 //variable para la cantidad de productos del carrito en el Badge del menú.
 const cantidadProdBadge = document.querySelector("#cantidad-prod");
 //Cantidad del carrito en el menú.
@@ -161,7 +162,7 @@ function obtenerPeli(idPelicula) {
 //Recorro carrito y genero lista html. PAGE mi-carrito.html.
 function agregoListaMiCarrito() {
     let emptyList = document.querySelector("#listaUl");
-    let carrito = JSON.parse(sessionStorage.getItem("carrito"));
+    // let carrito = JSON.parse(sessionStorage.getItem("carrito"));
     cantidadProdBadge.textContent = carrito.length;
     for (let namePeli of carrito) {
         let listado = document.createElement("li");
@@ -176,7 +177,7 @@ function agregoListaMiCarrito() {
 //Recorro carrito y genero lista html. PAGE checkout.html.
 function listaCheckout() {
     let emptyList = document.querySelector("#listaUl");
-    let carrito = JSON.parse(sessionStorage.getItem("carrito"));
+    // let carrito = JSON.parse(sessionStorage.getItem("carrito"));
     cantidadProdBadge.textContent = carrito.length;
     for (let namePeli of carrito) {
         let listado = document.createElement("li");
